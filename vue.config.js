@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: './'
+  publicPath: '/vue_js_contacts_list/'
 }
