@@ -1,5 +1,6 @@
 <template>
-  <div class="contacts">
+  <Loader v-if="users.length === 0" />
+  <div class="contacts" v-else>
     <h1 class="contacts__title">List</h1>
 
     <SingleContact
@@ -13,29 +14,30 @@
 </template>
 <script>
 import SingleContact from '@/components/SingleContact'
+import Loader from '@/components/Loader'
 export default {
-  components: { SingleContact },
-  mounted () {
+  components: {SingleContact, Loader},
+  mounted() {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then((response) => response.json())
       .then((data) => (this.users = data))
       .catch((error) => console.log(error))
   },
-  data () {
+  data() {
     return {
-      users: []
+      users: [],
     }
   },
   methods: {
-    deleteUser (id) {
+    deleteUser(id) {
       this.users = this.users.filter((user) => user.id !== id)
-    }
+    },
   },
   computed: {
-    firstFiveUsers () {
+    firstFiveUsers() {
       return this.users.filter((_, i) => i + 1 <= 5)
-    }
-  }
+    },
+  },
 }
 </script>
 <style lang="scss">
