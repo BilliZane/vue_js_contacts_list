@@ -63,8 +63,8 @@ export default {
     letter-spacing: 0.5px;
   }
   &__num {
-    margin-right: 20px;
-    padding-top: 8px;
+    margin: 0 20px;
+    padding-top: 5px;
     align-self: flex-start;
     font-size: 16px;
 

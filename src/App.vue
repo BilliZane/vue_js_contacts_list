@@ -16,7 +16,7 @@ export default {
   color: #2c3e50;
   max-width: 500px;
   margin: 0 auto;
-  padding: 0 15px 20px 15px;
+  padding: 0 15px 35px 15px;
 }
 
 .router-link-exact-active {
