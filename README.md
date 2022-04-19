@@ -4,7 +4,7 @@ The application displays data through Rest api.
 
 ### Technology Stack: ###
 * HTML
-* CSS;
+* SCSS;
 * JavaScript;
 * Vue.JS 3;
 * Vue Router.
