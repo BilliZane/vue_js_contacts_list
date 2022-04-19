@@ -63,7 +63,7 @@
       </div>
     </div>
 
-    <Footer />
+    <Footer :userLength="user.length" />
   </div>
 </template>
 <script>

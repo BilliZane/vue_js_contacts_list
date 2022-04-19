@@ -1,13 +1,18 @@
 <template>
   <footer class="footer">
-    <router-link :to="{name: 'Home'}" class="footer__btn"
+    <router-link
+      :to="{name: 'Home'}"
+      class="footer__btn"
+      v-if="userLength !== 0"
       >Back to the list</router-link
     >
   </footer>
 </template>
 
 <script>
-export default {}
+export default {
+  props: ['userLength'],
+}
 </script>
 
 <style lang="scss">
